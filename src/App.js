@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+
+import {withFavoriteNumber} from "./componenet/withFavoriteNumber"
+
+function App(props) {
+    return (
+        <div style={{textAlign:'center'}}>
+          
+         <h2>In Douglas Adams' The Hitchhiker's Guide to the Galaxy,</h2> 
+          
+        <p> <b> {props.favoriteNumber} </b>is the number from which all meaning of life, the universe, and everything could be derived.</p>  
+        </div>
+    )
 }
 
-export default App;
+export default withFavoriteNumber(App)
